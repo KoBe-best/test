@@ -1,0 +1,25 @@
+<div class="search_div">
+  <div class="form_group">
+    <label for="name">名称 </label>
+    <input nz-input placeholder="请输入商品名称">
+  </div>
+  <div class="form_group">
+    <label for="name">价格 </label>
+    <input nz-input placeholder="请输入商品价格">
+  </div>
+  <div class="form_group">
+    <label for="name">类别 </label>
+    <nz-select [(ngModel)]="selectedValue" nzAllowClear nzPlaceHolder="请选择商品类别">
+      <!-- <nz-option nzValue="电子" nzLabel="电子"></nz-option>
+      <nz-option nzValue="软件" nzLabel="软件"></nz-option>
+      <nz-option nzValue="书籍" nzLabel="书籍"></nz-option> -->
+      <nz-option *ngFor="let nzSeletcted of selectedValue" nzValue="{{nzSeletcted}}" nzLabel="{{nzSeletcted}}"></nz-option>
+    </nz-select>
+  </div>
+ `<div class="form_group">
+    <button nz-button nzType="primary" nzBlock [nzLoading]="isLoading" (click)="load()">
+      <i class="anticon anticon-search"></i>
+      搜索
+    </button>
+  </div>
+</div>

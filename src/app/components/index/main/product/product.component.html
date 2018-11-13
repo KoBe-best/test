@@ -1,0 +1,12 @@
+<div class="product_div">
+  <div class="card" *ngFor="let product of products" (click)="navigate(product.title)">
+    <nz-card nzHoverable style="width:240px" [nzCover]="coverTemplate">
+      <nz-card-meta nzTitle="{{product.title}}" nzDescription="{{product.price}}元"></nz-card-meta>
+      <!-- <nz-tate [(ngModel)]="{{product.rating}}" nzAllowHalf></nz-tate>
+      <span *ngIf="{{product.rating}}" class="ant-rate-text">{{product.rating}} stars</span> -->
+    </nz-card>
+    <ng-template #coverTemplate>
+      <img src="../../../../../assets/img/girl.png" alt="">
+    </ng-template>
+  </div>
+</div>

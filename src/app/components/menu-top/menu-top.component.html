@@ -1,0 +1,43 @@
+<div class="menu_top">
+  <!--<span class="title">FiberHome</span>-->
+  <ul nz-menu [nzMode]="'horizontal'" [nzTheme]="'dark'" >
+    <li nz-menu-item><i class="anticon anticon-home"></i> 首页</li>
+    <li nz-menu-item nzDisabled><i class="anticon anticon-appstore"></i> 产品</li>
+    <li nz-submenu>
+      <span title><i class="anticon anticon-environment"></i> 关于我们</span>
+      <ul>
+        <li nz-menu-group>
+          <span title>Item 1</span>
+          <ul>
+            <li nz-menu-item>Option 1</li>
+            <li nz-menu-item>Option 2</li>
+          </ul>
+        </li>
+        <li nz-menu-group>
+          <span title>Item 2</span>
+          <ul>
+            <li nz-menu-item>Option 3</li>
+            <li nz-menu-item>Option 4</li>
+            <li nz-submenu>
+              <span title>Sub Menu</span>
+              <ul>
+                <li nz-menu-item nzDisabled>Option 5</li>
+                <li nz-menu-item>Option 6</li>
+              </ul>
+            </li>
+            <li nz-submenu nzDisabled>
+              <span title>Disabled Sub Menu</span>
+              <ul>
+                <li nz-menu-item>Option 5</li>
+                <li nz-menu-item>Option 6</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li nz-menu-item>
+      <i class="anticon anticon-phone"></i>联系我们
+    </li>
+  </ul>
+</div>
